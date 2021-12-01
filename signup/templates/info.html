@@ -1,0 +1,43 @@
+{% block content %}
+
+    <div class="container">
+
+    <h1>Checking </h1>
+
+   
+
+
+
+        <form class = "form" method="post" **action="api"**>
+
+            {% csrf_token %}
+
+            <label for="email">Email:</label>
+
+            <input type="text"  name="email1" id="email1">
+
+            <br>
+
+   
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+
+
+    {% for result in news %}
+
+        {{result}}
+
+
+
+    {% endfor %}
+
+
+
+
+
+    {% endblock %}
